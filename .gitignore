@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Secrets - JANGAN PERNAH commit
+.env
+.env.local
+.env.*.local
+.pgpass_new
+*.pgpass
+*.pem
+*.key
+*.crt
+
+# Backups
+backups/
+*.sql
+*.sql.gz
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Build artifacts
+dist/
+build/
+.next/
+out/
+*.log
+logs/
+
+# Docker
+postgres_data/
+redis_data/
+
+# Data pribadi / sample
+*.tgz
+ngrok
+
+# Demo seed dengan hardcoded credential & PII - gunakan seed-demo.example.py sebagai gantinya
+seed-demo.py
+

@@ -1,0 +1,20 @@
+{
+  "name": "hris-payroll",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HRIS & Payroll Web Application - Indonesia",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm run start:dev --workspace=backend",
+    "dev:frontend": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=backend && npm run build --workspace=frontend",
+    "lint": "npm run lint --workspace=backend && npm run lint --workspace=frontend",
+    "db:seed": "npm run seed --workspace=backend",
+    "db:migrate": "npm run migration:run --workspace=backend"
+  },
+  "workspaces": [
+    "backend",
+    "frontend",
+    "packages/*"
+  ]
+}
